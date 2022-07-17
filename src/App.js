@@ -1,25 +1,19 @@
-import logo from './logo.svg';
-import './App.css';
+import Post from './components/Post/Post'
+import { ANAKIN_IMAGE, RAY_IMAGE } from "./constants/constImg";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+	return (
+		<Post
+			author={{
+				name: "Anakin Skywalker",
+				photo: ANAKIN_IMAGE,
+				nickname: "@dart_vader",
+			}}
+			content="WTF? Who is Ray? Why she is Skywalker? Luke...?"
+			image={RAY_IMAGE}
+			date={"26 Feb."}
+		/>
+	)
+};
 
 export default App;
